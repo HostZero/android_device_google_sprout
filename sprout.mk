@@ -153,5 +153,10 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout
+    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:recovery/root/init.sprout.rc \
+    $(LOCAL_PATH)/rootdir/root/fstab.sprout:recovery/root/fstab.sprout \
+    $(LOCAL_PATH)/rootdir/root/factory_init.rc:recovery/root/factory_init.rc \
+    $(LOCAL_PATH)/rootdir/root/init.modem.rc:recovery/root/init.modem.rc \
+    $(LOCAL_PATH)/rootdir/root/init.protect.rc:recovery/root/init.protect.rc \
+    $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:recovery/root/init.sprout.usb.rc \
+    $(LOCAL_PATH)/rootdir/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc \
