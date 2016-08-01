@@ -1,4 +1,8 @@
-$(call inherit-product, device/google/sprout/sprout.mk)
+$(call inherit-product, device/google/sprout/full_sprout.mk)
+
+# Correct bootanimation size for the screen
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
 
 # Common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
