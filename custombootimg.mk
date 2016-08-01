@@ -11,10 +11,6 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
 		$(recovery_ramdisk) \
 		$(recovery_kernel)
 	@echo -e ${PRT_IMG}"----- Compressing recovery ramdisk with lzma ------"${CL_RST}
-	if [ -e $(recovery_uncompressed_ramdisk).lzma ] ;\
-	then \
-		rm $(recovery_uncompressed_ramdisk).lzma ; \
-	fi;
 	$(LZMA_BIN) $(recovery_uncompressed_ramdisk)
 	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
 	@echo -e ${PRT_IMG}"----- Making recovery image ------"${CL_RST}
