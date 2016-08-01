@@ -19,6 +19,7 @@
 TARGET_OTA_ASSERT_DEVICE := sprout, sprout4, sprout8
 
 TARGET_RECOVERY_FSTAB := device/google/sprout/recovery/root/etc/twrp.fstab
+BOARD_CUSTOM_BOOTIMG_MK := device/google/sprout/custombootimg.mk
 
 LOCAL_PATH := device/google/sprout
 
