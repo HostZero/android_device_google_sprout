@@ -19,7 +19,6 @@
 TARGET_OTA_ASSERT_DEVICE := sprout, sprout4, sprout8
 
 TARGET_RECOVERY_FSTAB := device/google/sprout/recovery/root/etc/twrp.fstab
-BOARD_CUSTOM_BOOTIMG_MK := device/google/sprout/custombootimg.mk
 
 LOCAL_PATH := device/google/sprout
 
@@ -47,8 +46,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # kernel stuff
 TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
-TARGET_KERNEL_SOURCE := 
-TARGET_KERNEL_CONFIG := 
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
@@ -59,6 +56,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432 #65536 * 512 boot
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33538048 #65504 * 512 recovery
 
 # TWRP stuff
+TW_THEME := portrait_mdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"

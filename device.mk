@@ -23,6 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+# prebuilt-binaries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
     $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:root/init.sprout_common.rc \
