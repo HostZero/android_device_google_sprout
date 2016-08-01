@@ -16,9 +16,9 @@
 
 # inherit from common sprout repo
 
-TARGET_OTA_ASSERT_DEVICE := sprout
+TARGET_OTA_ASSERT_DEVICE := sprout, sprout4, sprout8
 
-TARGET_RECOVERY_FSTAB := device/google/sprout/rootdir/root/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/google/sprout/recovery/root/etc/twrp.fstab
 
 LOCAL_PATH := device/google/sprout
 
@@ -45,7 +45,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # kernel stuff
-TARGET_PREBUILT_KERNEL := device/google/sprout/rootdir/root/kernel
+TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
 TARGET_KERNEL_SOURCE := 
 TARGET_KERNEL_CONFIG := 
 BOARD_KERNEL_CMDLINE :=
