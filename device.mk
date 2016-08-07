@@ -23,11 +23,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# SuperUpdater dependencies
+# RECOVERYOTA
+PRODUCT_PACKAGES += \
+        RecoveryOTA
+
+# RECOVERYOTA Dependencies
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.ota.romname=TWRP for Android One First Gen (sprout) \
-        ro.ota.version=3.0.2-8 \
-        ro.ota.manifest=https://raw.githubusercontent.com/HostZero/OTA/master/twrp.xml
+        ro.ota.recoveryname=TWRP_for_Android_One_First_Gen (sprout) \
+        ro.ota.recoveryversion=3.0.2-8 \
+        ro.ota.recoverymanifest=https://raw.githubusercontent.com/HostZero/OTA/master/twrp.xml
 
 # prebuilt-binaries
 PRODUCT_COPY_FILES += \
