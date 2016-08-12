@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/google/sprout
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -22,6 +24,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+PRODUCT_COPY_FILES += \
+       $(LOCAL_PATH)/prebuilt/kernel:kernel
 
 # RECOVERYOTA
 PRODUCT_PACKAGES += \
