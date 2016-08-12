@@ -32,12 +32,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         RecoveryOTA
 
-# RECOVERYOTA Dependencies
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.ota.recoveryname=TWRP_for_Android_One_First_Gen (sprout) \
-        ro.ota.recoveryversion=3.0.2-8 \
-        ro.ota.recoverymanifest=https://raw.githubusercontent.com/HostZero/OTA/master/twrp.xml
-
 # prebuilt-binaries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd

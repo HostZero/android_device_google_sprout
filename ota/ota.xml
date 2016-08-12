@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SlimOTA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ota.xsd">
+    <Stable>
+	 <sprout>
+            <Filename>twrp-3.0.2-8-sprout.zip</Filename>
+            <BuildUrl
+            	id="build"
+            	title="LatestBuild"
+            	description="Download Latest Build">https://tx1.androidfilehost.com/dl/hx8LlpWoG03TJKiMoVER9w/1471234983/24659351692116094/twrp-3.0.2-8-sprout.img</BuildUrl>
+            <RomUrl
+                id="rom"
+                title="Rom"
+                description="Download TWRP builds">https://basketbuild.com/devs/resurrectionremix/falcon</RomUrl>
+            <ChangelogUrl
+                id="changelog"
+                title="Changelog"
+                description="View Changelog">https://github.com/HostZero/android_device_google_sprout/blob/cm-13.0/changelog/CHANGELOG.txt</ChangelogUrl>
+	</sprout>
+    </Stable>
+</SlimOTA>
