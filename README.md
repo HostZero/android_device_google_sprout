@@ -8,6 +8,7 @@ XDA Thread: http://forum.xda-developers.com/crossdevice-dev/android-one-crossdev
 cd working_dir
 mkdir -p device/google/sprout
 git clone https://github.com/HostZero/android_device_google_sprout -b cm-13.0 device/google/sprout
+git clone https://github.com/HostZero/android_kernel_mediatek_sprout -b cm-13.0-twrp kernel/mediatek/sprout
 . build/envetup.sh
 lunch cm_sprout-eng
 make clean && make -j3 recoveryimage
