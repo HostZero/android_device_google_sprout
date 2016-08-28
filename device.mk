@@ -25,12 +25,12 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # prebuilt-binaries
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd
+    $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd \
+    $(LOCAL_PATH)/recovery/root/sbin/multi_init:root/sbin/multi_init
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
     $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:root/init.sprout_common.rc \
-    $(LOCAL_PATH)/recovery/root/sbin/multi_init:root/sbin/multi_init \
     $(LOCAL_PATH)/recovery/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/recovery/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/recovery/root/factory_init.rc:root/factory_init.rc \
