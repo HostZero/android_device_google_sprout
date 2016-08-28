@@ -16,13 +16,14 @@
 
 # inherit from common sprout repo
 
-TARGET_OTA_ASSERT_DEVICE := sprout, sprout4, sprout8
+TARGET_OTA_ASSERT_DEVICE := sprout,sprout4,sprout8
 
 TARGET_RECOVERY_FSTAB := device/google/sprout/recovery/root/etc/twrp.fstab
 BOARD_CUSTOM_BOOTIMG_MK := device/google/sprout/custombootimg.mk
 
 LOCAL_PATH := device/google/sprout
 
+# Architecture
 TARGET_BOARD_PLATFORM := mt6582
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
