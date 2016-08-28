@@ -23,10 +23,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# RECOVERYOTA
-PRODUCT_PACKAGES += \
-        RecoveryOTA
-
 # prebuilt-binaries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd
