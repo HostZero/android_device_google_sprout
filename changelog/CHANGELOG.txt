@@ -1,5 +1,5 @@
 CHANGELOG for 3.0.2-9:
--android base r61 --> r61
+-android base r61 --> r62
 -upstreamed to "MOB30Z" - August Security Patch
 -now backup protect_f and protect_s
 -now backup data and cache in f2fs as well as cache (auto)
