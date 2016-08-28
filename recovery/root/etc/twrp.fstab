@@ -3,6 +3,8 @@
 /system		   auto		/dev/block/platform/mtk-msdc.0/by-name/system
 /cache		   auto		/dev/block/platform/mtk-msdc.0/by-name/cache
 /data		   auto		/dev/block/platform/mtk-msdc.0/by-name/userdata
+/protect_f         ext4         /dev/block/platform/mtk-msdc.0/by-name/protect1 flags=display="PROTECT1";backup=1;
+/protect_s         ext4         /dev/block/platform/mtk-msdc.0/by-name/protect2 flags=display="PROTECT2";backup=1;
 /oem               ext4         /dev/block/platform/mtk-msdc.0/by-name/oem flags=display="OEM";backup=1;
 /nvram 		   emmc         /dev/block/platform/mtk-msdc.0/by-name/nvram flags=display="IMEI/NVRAM";backup=1
 /sec_ro 	   emmc         /dev/block/platform/mtk-msdc.0/by-name/secro flags=subpartitionof=/nvram;backup=1
