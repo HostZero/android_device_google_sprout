@@ -23,6 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+# Override Font_log Errors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/font_log.png:obj/ETC/font_log.png_intermediates/font_log.png
+
 # CHANGELOG
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/changelog/CHANGELOG.txt:recovery/root/changelog/CHANGELOG.txt
