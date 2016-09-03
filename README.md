@@ -1,15 +1,21 @@
+Android One
+==============
 
-# UNOFFICIAL TeamWin Recovery Projects for Android One First Gen.
+The three Android One devices (codenamed _"sprout"_) are low-range smartphones from Google with Micromax, Spice and Karbonn.
 
-XDA Thread: http://forum.xda-developers.com/crossdevice-dev/android-one-crossdevice-development-original-android-development/unofffical-twrp-3-0-2-0-android-one-t3358636
+Android One was announced in Google I/O 2014.
 
-### How to Compile TWRP:
-```sh
-cd working_dir
-mkdir -p device/google/sprout
-git clone https://github.com/HostZero/android_device_google_sprout -b android-6.0 device/google/sprout
-. build/envetup.sh
-lunch omni_sprout-eng
-make clean && make -j3 recoveryimage
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | 1.3GHz Quad-Core MT6582
+GPU     | Mali-400MP
+Memory  | 1GB RAM
+Shipped Android Version | 4.4.4
+Storage | 4GB
+Battery | 1700 mAh
+Display | 4.5" 854 x 480 px
+Camera  | 5MPx, LED Flash
 
-### OUTPUT: working_dir/out/target/product/target/sprout/recovery.img
+![Android One](http://news.bbcimg.co.uk/media/images/77588000/jpg/_77588715_09e78d0d-b02b-418e-8bd0-a4176c985978.jpg "All three android one devices")
+
+This branch is for building TWRP 3.x (or Android Marshmallow AOSP based recoveries) Recovery.
