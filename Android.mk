@@ -25,6 +25,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
+# UNOFFICIAL, NIGHTLY, STABLE
+RECOVERY_BUILDTYPE := UNOFFICIAL
+
 ifneq ($(filter sprout,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

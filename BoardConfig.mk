@@ -50,8 +50,19 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# kernel stuff
+# Kernel stuff
+ifneq ($(RECOVERY_BUILDTYPE),UNOFFICIAL)
 TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
+endif
+ifneq ($(RECOVERY_BUILDTYPE),NIGHTLY)
+TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+TARGET_KERNEL_CONFIG := sprout_defconfig
+endif
+ifneq ($(RECOVERY_BUILDTYPE),STABLE)
+TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+TARGET_KERNEL_CONFIG := sprout_defconfig
+KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro-5.2/bin/arm-eabi-
+endif
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
