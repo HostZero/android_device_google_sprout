@@ -1,2 +1,3 @@
-add_lunch_combo omni_sprout-userdebug
-add_lunch_combo omni_sprout-eng
+for var in eng user userdebug; do
+  add_lunch_combo omni_sprout-$var
+done
