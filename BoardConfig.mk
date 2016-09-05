@@ -80,3 +80,7 @@ TW_NO_REBOOT_RECOVERY := false
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_SUPERSU := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/google/sprout/sepolicy
