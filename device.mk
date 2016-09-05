@@ -39,4 +39,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.modem.rc:recovery/root/init.modem.rc \
     $(LOCAL_PATH)/recovery/root/init.protect.rc:recovery/root/init.protect.rc \
     $(LOCAL_PATH)/recovery/root/init.sprout.usb.rc:recovery/root/init.sprout.usb.rc \
-    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc \
+    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc
+
+# Dynamically set props
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.name \
+    ro.product.manufacturer \
+    ro.product.model
