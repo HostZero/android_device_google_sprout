@@ -55,11 +55,11 @@ ifneq ($(RECOVERY_BUILDTYPE),UNOFFICIAL)
 TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
 endif
 ifneq ($(RECOVERY_BUILDTYPE),NIGHTLY)
-TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := sprout_defconfig
 endif
 ifneq ($(RECOVERY_BUILDTYPE),STABLE)
-TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := sprout_defconfig
 KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro-5.2/bin/arm-eabi-
 endif
