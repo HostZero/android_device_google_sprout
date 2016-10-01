@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "HostZero/android_kernel_mediatek_sprout",
+    "repository":  "HostZero/android_kernel_google_sprout",
     "target_path": "kernel/mediatek/sprout",
     "revision":    "android-7.0"
   },
