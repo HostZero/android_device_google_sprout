@@ -87,6 +87,9 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 
 TARGET_SYSTEM_PROP := device/google/sprout/system.prop
 
-# SELinux
+# SELinux (Using Prebuilt as Sepolicy for 14 is not open yet)
 # BOARD_SEPOLICY_DIRS += \
 #   device/google/sprout/sepolicy
+## Prebuilt SELinux from CyanogenMod 14.0
+PRODUCT_COPY_FILES := \
+	device/google/sprout/sepolicy/prebuilt/sepolicy:$(OUT)/obj/ETC/sepolicy.recovery_intermediates/sepolicy.recovery
