@@ -53,11 +53,15 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Kernel stuff
 ifneq ($(RECOVERY_BUILDTYPE),UNOFFICIAL)
 TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
+PRODUCT_COPY_FILES := \
+	device/google/sprout/prebuilt/kernel:kernel
 endif
+
 ifneq ($(RECOVERY_BUILDTYPE),NIGHTLY)
 TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := sprout_defconfig
 endif
+
 ifneq ($(RECOVERY_BUILDTYPE),STABLE)
 TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := sprout_defconfig
