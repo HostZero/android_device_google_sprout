@@ -24,19 +24,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(shell mkdir -p $(OUT)/obj/ETC/sepolicy.recovery_intermediates)
-$(shell mkdir -p $(OUT)/obj/ETC/sepolicy_intermediates) 
+$(shell mkdir -p $(OUT)obj/ETC/sepolicy_intermediates) 
 $(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepolicy.recovery_intermediates/sepolicy.recovery)
 $(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepolicy_intermediates/sepolicy)
 
-# root
-$(shell mkdir -p out/target/product/sprout/recovery/root)
-$(shell cp device/google/sprout/recovery/root/fstab.sprout out/target/product/sprout/recovery/root/fstab.sprout)
-$(shell cp device/google/sprout/recovery/root/init.sprout.rc out/target/product/sprout/recovery/root/init.sprout.rc)
-$(shell cp device/google/sprout/recovery/root/init.sprout.usb.rc out/target/product/sprout/recovery/root/init.sprout.usb.rc)
-$(shell cp device/google/sprout/recovery/root/init.protect.rc out/target/product/sprout/recovery/root/init.protect.rc)
-$(shell cp device/google/sprout/recovery/root/init.modem.rc out/target/product/sprout/recovery/root/init.modem.rc)
-$(shell cp device/google/sprout/recovery/root/init.sprout_common.rc out/target/product/sprout/recovery/root/init.sprout_common.rc)
-$(shell cp device/google/sprout/recovery/root/ueventd.sprout.rc out/target/product/sprout/recovery/root/ueventd.sprout.rc)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
+    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:root/init.sprout_common.rc \
+    $(LOCAL_PATH)/recovery/root/init.protect.rc:root/init.protect.rc \
+    $(LOCAL_PATH)/recovery/root/init.modem.rc:root/init.modem.rc \
+    $(LOCAL_PATH)/recovery/root/factory_init.rc:root/factory_init.rc \
+    $(LOCAL_PATH)/recovery/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
+    $(LOCAL_PATH)/recovery/root/init.sprout.usb.rc:root/init.sprout.usb.rc
+	
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.sprout.rc:recovery/root/init.sprout.rc \
+    $(LOCAL_PATH)/recovery/root/fstab.sprout:recovery/root/fstab.sprout \
+    $(LOCAL_PATH)/recovery/root/factory_init.rc:recovery/root/factory_init.rc \
+    $(LOCAL_PATH)/recovery/root/init.modem.rc:recovery/root/init.modem.rc \
+    $(LOCAL_PATH)/recovery/root/init.protect.rc:recovery/root/init.protect.rc \
+    $(LOCAL_PATH)/recovery/root/init.sprout.usb.rc:recovery/root/init.sprout.usb.rc \
+    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc \
+    $(LOCAL_PATH)/recovery/root/ueventd.sprout.rc:recovery/root/ueventd.sprout.rc
 
 # Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
