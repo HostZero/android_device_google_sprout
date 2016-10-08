@@ -24,7 +24,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(shell mkdir -p $(OUT)/obj/ETC/sepolicy.recovery_intermediates)
+$(shell mkdir -p $(OUT)/obj/ETC/sepolicy_intermediates) 
 $(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepolicy.recovery_intermediates/sepolicy.recovery)
+$(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepolicy_intermediates/sepolicy)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
