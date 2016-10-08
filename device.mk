@@ -29,14 +29,14 @@ $(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepoli
 $(shell cp device/google/sprout/sepolicy/prebuilt/sepolicy $(OUT)/obj/ETC/sepolicy_intermediates/sepolicy)
 
 # root
-$(shell mkdir -p $(OUT)/recovery/root)
-$(shell cp device/google/sprout/recovery/root/fstab.sprout $(OUT)/recovery/root/fstab.sprout)
-$(shell cp device/google/sprout/recovery/root/init.sprout.rc $(OUT)/recovery/root/init.sprout.rc)
-$(shell cp device/google/sprout/recovery/root/init.sprout.usb.rc $(OUT)/recovery/root/init.sprout.usb.rc)
-$(shell cp device/google/sprout/recovery/root/init.protect.rc $(OUT)/recovery/root/init.protect.rc)
-$(shell cp device/google/sprout/recovery/root/init.modem.rc $(OUT)/recovery/root/init.modem.rc)
-$(shell cp device/google/sprout/recovery/root/init.sprout_common.rc $(OUT)/recovery/root/init.sprout_common.rc)
-$(shell cp device/google/sprout/recovery/root/ueventd.sprout.rc $(OUT)/recovery/root/ueventd.sprout.rc)
+$(shell mkdir -p out/target/product/sprout/recovery/root)
+$(shell cp device/google/sprout/recovery/root/fstab.sprout out/target/product/sprout/recovery/root/fstab.sprout)
+$(shell cp device/google/sprout/recovery/root/init.sprout.rc out/target/product/sprout/recovery/root/init.sprout.rc)
+$(shell cp device/google/sprout/recovery/root/init.sprout.usb.rc out/target/product/sprout/recovery/root/init.sprout.usb.rc)
+$(shell cp device/google/sprout/recovery/root/init.protect.rc out/target/product/sprout/recovery/root/init.protect.rc)
+$(shell cp device/google/sprout/recovery/root/init.modem.rc out/target/product/sprout/recovery/root/init.modem.rc)
+$(shell cp device/google/sprout/recovery/root/init.sprout_common.rc out/target/product/sprout/recovery/root/init.sprout_common.rc)
+$(shell cp device/google/sprout/recovery/root/ueventd.sprout.rc out/target/product/sprout/recovery/root/ueventd.sprout.rc)
 
 # Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
