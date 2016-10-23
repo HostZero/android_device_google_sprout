@@ -87,6 +87,5 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 
 TARGET_SYSTEM_PROP := device/google/sprout/system.prop
 
-# SELinux (Using Prebuilt as Sepolicy for 14 is not open yet)
-# BOARD_SEPOLICY_DIRS += \
-#   device/google/sprout/sepolicy
+BOARD_SEPOLICY_DIRS += \
+  device/google/sprout/sepolicy
