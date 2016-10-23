@@ -65,7 +65,7 @@ endif
 ifneq ($(RECOVERY_BUILDTYPE),STABLE)
 TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := sprout_defconfig
-KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro-5.2/bin/arm-eabi-
+KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/ubertc-5.3/bin/arm-linux-androideabi-
 endif
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
