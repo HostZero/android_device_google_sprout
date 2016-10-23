@@ -9,5 +9,4 @@
 /nvram 		   emmc         /dev/block/platform/mtk-msdc.0/by-name/nvram flags=display="IMEI/NVRAM";backup=1
 /sec_ro 	   emmc         /dev/block/platform/mtk-msdc.0/by-name/secro flags=subpartitionof=/nvram;backup=1
 /recovery	   emmc		/dev/block/platform/mtk-msdc.0/by-name/recovery flags=display="Recovery";backup=1
-/persistent		emmc	/dev/block/platform/mtk-msdc.0/by-name/frp	flags=display="PERSISTENT"
 /microSD	   vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="microSD";storage;wipeingui;removable
