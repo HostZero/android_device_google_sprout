@@ -84,6 +84,8 @@ TW_NO_REBOOT_RECOVERY := false
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_SUPERSU := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_NTFS_3G := true
 
 TARGET_SYSTEM_PROP := device/google/sprout/system.prop
 
