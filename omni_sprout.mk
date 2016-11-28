@@ -4,7 +4,9 @@ TARGET_SCREEN_WIDTH := 480
 
 # Common Omni stuff
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, device/google/sprout/device.mk)
+
+# Common Sprout Devices stuff
+$(call inherit-product, device/google/sprout/sprout.mk)
 
 PRODUCT_NAME := omni_sprout
 PRODUCT_DEVICE := sprout
