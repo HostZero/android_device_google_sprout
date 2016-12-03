@@ -21,20 +21,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-# Override Font_log Errors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/font_log.png:obj/ETC/font_log.png_intermediates/font_log.png
-
-# CHANGELOG
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/changelog/CHANGELOG.txt:recovery/root/changelog/CHANGELOG.txt
-
-# prebuilt-binaries
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/healthd:obj/EXECUTABLES/healthd_intermediates/LINKED/healthd
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
     $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:root/init.sprout_common.rc \
@@ -52,4 +38,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.modem.rc:recovery/root/init.modem.rc \
     $(LOCAL_PATH)/recovery/root/init.protect.rc:recovery/root/init.protect.rc \
     $(LOCAL_PATH)/recovery/root/init.sprout.usb.rc:recovery/root/init.sprout.usb.rc \
-    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc \
+    $(LOCAL_PATH)/recovery/root/init.sprout_common.rc:recovery/root/init.sprout_common.rc
+
+# Dynamically set props
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.name \
+    ro.product.manufacturer \
+    ro.product.model
+	
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi

@@ -77,3 +77,38 @@ TW_NO_REBOOT_RECOVERY := false
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_SUPERSU := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+
+# OpenGL
+USE_OPENGL_RENDERER:= true
+
+# WiFi
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mt66xx
+WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
+WIFI_DRIVER_FW_PATH_STA:=STA
+WIFI_DRIVER_FW_PATH_AP:=AP
+WIFI_DRIVER_FW_PATH_STA:=P2P
+
+# Enable Minikin text layout engine (will be the default soon)
+USE_MINIKIN := true
+
+MALLOC_SVELTE := true
+DEVICE_RESOLUTION := 480x854
+
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+
+TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/google/sprout-common/sepolicy
+
+BOARD_SECCOMP_POLICY += device/google/sprout/seccomp
