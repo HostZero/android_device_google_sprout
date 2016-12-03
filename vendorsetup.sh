@@ -1,2 +1,2 @@
-add_lunch_combo cm_sprout-userdebug
-add_lunch_combo cm_sprout-eng
+add_lunch_combo aosp_sprout-userdebug
+add_lunch_combo aosp_sprout-eng

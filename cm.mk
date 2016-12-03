@@ -4,6 +4,8 @@ $(call inherit-product, device/google/sprout/full_sprout.mk)
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
+$(call inherit-product, device/google/sprout/full_sprout.mk)
+
 # Common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 

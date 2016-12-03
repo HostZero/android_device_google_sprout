@@ -15,7 +15,7 @@
 #
 
 # Inherit from sprout device
-$(call inherit-product, device/google/sprout/device.mk)
+$(call inherit-product, device/google/sprout/sprout.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sprout
