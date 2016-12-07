@@ -94,6 +94,6 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/google/sprout-common/sepolicy
+    device/google/sprout/sepolicy
 
 BOARD_SECCOMP_POLICY += device/google/sprout/seccomp
