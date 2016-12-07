@@ -20,6 +20,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # common sprout
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(shell mkdir -p hdpi/)
+$(shell touch hdpi/font_log.png)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/fstab.sprout:root/fstab.sprout \
