@@ -34,7 +34,7 @@ ARCH_ARM_HAVE_NEON := true
 TARGET_NO_BOOTLOADER := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a7
-TARGET_CPU_VARIANT:= cortex-a7
+TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # Storage allocations
@@ -51,11 +51,14 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # kernel stuff
-TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
+TARGET_KERNEL_SOURCE := kernel/google/sprout
+TARGET_KERNEL_CONFIG := cm_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 # TWRP stuff
 TW_THEME := portrait_mdpi
