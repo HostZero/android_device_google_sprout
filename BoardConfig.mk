@@ -51,14 +51,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # kernel stuff
+TARGET_PREBUILT_KERNEL := device/google/sprout/prebuilt/kernel
 TARGET_KERNEL_SOURCE := kernel/google/sprout
 TARGET_KERNEL_CONFIG := cm_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/
-KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 # TWRP stuff
 TW_THEME := portrait_mdpi
