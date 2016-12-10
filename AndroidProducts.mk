@@ -1,3 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_sprout4.mk \
-    $(LOCAL_DIR)/full_sprout4.mk \
+    $(LOCAL_PATH)/aosp_sprout.mk \
+    $(LOCAL_PATH)/full_sprout.mk
